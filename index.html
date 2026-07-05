@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shree Siddh Homeopathy Consultancy</title>
+
+<style>
+    /* Cure Stories */
+.cure-section{
+    padding:70px 8%;
+    background:#f8fbff;
+}
+
+.cure-section h2{
+    text-align:center;
+    color:#0d6efd;
+    margin-bottom:15px;
+    font-size:38px;
+}
+
+.cure-section p{
+    text-align:center;
+    color:#555;
+    margin-bottom:35px;
+}
+
+.cure-gallery{
+    display:flex;
+    gap:25px;
+    overflow-x:auto;
+    scroll-behavior:smooth;
+    padding-bottom:15px;
+}
+
+.cure-gallery::-webkit-scrollbar{
+    height:8px;
+}
+
+.cure-gallery::-webkit-scrollbar-thumb{
+    background:#0d6efd;
+    border-radius:10px;
+}
+
+.cure-card{
+    min-width:320px;
+    background:white;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+    overflow:hidden;
+    transition:0.4s;
+    flex-shrink:0;
+}
+
+.cure-card:hover{
+    transform:translateY(-8px) scale(1.03);
+}
+
+.cure-card img{
+    width:100%;
+    height:420px;
+    object-fit:cover;
+}
+
+.cure-card h3{
+    padding:15px;
+    text-align:center;
+    color:#0d6efd;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.whatsapp-logo:hover{
+    transform:scale(1.15) rotate(8deg);
+}
+body{
+    background:#f5f9ff;
+    color:#333;
+}
+
+header{
+    background:#0d6efd;
+    color:#fff;
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+}
+
+.logo{
+    font-size:26px;
+    font-weight:bold;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#ffe082;
+}
+
+
+
+
+
+.hero{
+    background:
+        linear-gradient(rgba(0,77,64,0.55), rgba(13,110,253,0.45)),
+        url("3M6A8246.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+.typing{
+    display:inline-block;
+    overflow:hidden;
+    white-space:nowrap;
+    border-right:3px solid #fff;
+    width:0;
+    margin:auto;
+    animation:
+        typing 4s steps(42,end) forwards,
+        blink .7s step-end 6,
+        hideCursor 0s 4s forwards;
+}
+
+@keyframes typing{
+    from{
+        width:0;
+    }
+    to{
+        width:100%;
+    }
+}
+
+@keyframes blink{
+    50%{
+        border-color:transparent;
+    }
+}
+
+@keyframes hideCursor{
+    to{
+        border-right:none;
+    }
+}
+.hero h1{
+    font-size:48px;
+}
+
+.hero p{
+    margin-top:20px;
+    font-size:20px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:12px 25px;
+    background:#fff;
+    color:#0d6efd;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+}
+section{
+    padding:60px 10%;
+    background:
+        linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)),
+        url("Logo.jpg");
+    background-size:300px;
+    background-repeat:repeat;
+    background-position:center;
+}
+
+h2{
+    color:#0d6efd;
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.about{
+    text-align:center;
+    line-height:1.8;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    text-align:center;
+}
+
+.card img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:15px;
+}
+
+.card h3{
+    color:#0d6efd;
+}
+
+.card p{
+    margin-top:10px;
+    line-height:1.6;
+}
+
+form{
+    max-width:700px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+input,textarea{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:6px;
+}
+
+button{
+    width:100%;
+    background:#0d6efd;
+    color:white;
+    padding:14px;
+    border:none;
+    border-radius:6px;
+    font-size:18px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#084db5;
+}
+
+footer{
+    background:#0d6efd;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+
+@media(max-width:768px){
+header{
+    flex-direction:column;
+}
+nav{
+    margin-top:10px;
+}
+.hero h1{
+    font-size:34px;
+}
+}
+</style>
+
+</head>
+<body>
+<header>
+<div class="logo">🏥 Shree Siddh Homeopathy Consultancy</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About Us</a>
+<a href="#doctors">Doctors</a>
+<a href="#cure">Cure Stories</a>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<h1 class="typing">Welcome to Shree Siddh Homeopathy Consultancy..!!</h1>
+
+
+<p>Natural Healing • Personalized Care • Better Health</p>
+
+<a href="https://wa.me/917447429295?text=Hello%20Shri%20Siddh%20Homeopathy%20Consultancy,%0A%0AI%20would%20like%20to%20book%20an%20appointment.%0A%0AName:%20%0AMobile:%20%0APreferred%20Date:%20%0AReason:%20"
+   class="btn"
+   target="_blank">
+   Book Appointment
+</a>
+</section>
+
+<section id="about">
+<h2>About Us</h2>
+
+<div class="about">
+<p>
+Shree Siddh Homeopathy Consultancy is dedicated to providing safe,
+effective, and personalized homeopathic treatment for patients of all ages.
+We focus on treating the root cause of illness while promoting overall
+health and well-being through holistic care.
+</p>
+</div>
+
+</section>
+
+<section id="doctors">
+
+<h2>Our Doctors</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<img src="DR_Rahul.jpeg"
+     alt="Dr. Rahul Shirkande"
+     style="width:160px;
+            height:160px;
+            object-fit:cover;
+            border-radius:50%;
+            border:4px solid #0d6efd;
+            box-shadow:0 4px 10px rgba(0,0,0,0.2);">
+
+<h3>Dr. Rahul Shirkande</h3>
+
+<h4>MD (Mumbai)</h4>
+
+<p>
+Experienced Homeopathic Consultant providing individualized treatment
+for acute and chronic diseases with a holistic approach.
+</p>
+
+</div>
+
+<div class="card">
+
+<img src="DR_Priyanka.jpeg"
+     alt="Dr. Priyanka Shirkande"
+     style="width:160px;height:160px;object-fit:cover;border-radius:50%;border:4px solid #0d6efd;box-shadow:0 4px 10px rgba(0,0,0,0.2);">
+<h3>Dr. Priyanka Shirkande</h3>
+
+<h4>Pediatrician</h4>
+
+<p>
+Dedicated to children's healthcare, ensuring compassionate,
+family-centered medical care for infants, children, and adolescents.
+</p>
+
+</div>
+
+</div>
+
+
+<section class="cure-section" id="cure">
+
+<h2>✨ Cure Stories</h2>
+
+<p>Real patients. Real recovery. Real smiles.</p>
+
+<div class="cure-gallery">
+
+<div class="cure-card">
+<img src="Result.jpeg" alt="Cure Story 1">
+<h3>Patient Recovery</h3>
+</div>
+
+<div class="cure-card">
+<img src="Result1.jpeg" alt="Cure Story 2">
+<h3>Successful Treatment</h3>
+</div>
+
+<div class="cure-card">
+<img src="Result2.jpeg" alt="Cure Story 3">
+<h3>Healthy Living</h3>
+</div>
+
+<div class="cure-card">
+<img src="Result3.jpeg" alt="Cure Story 4">
+<h3>Natural Healing</h3>
+</div>
+
+<div class="cure-card">
+<img src="Result4.jpeg" alt="Cure Story 5">
+<h3>Happy Patient</h3>
+</div>
+
+</div>
+
+</section>
+<h2>Clinic Timings</h2>
+
+<div style="max-width:700px;
+            margin:auto;
+            background:rgba(255,255,255,0.95);
+            padding:35px;
+            border-radius:15px;
+            box-shadow:0 8px 20px rgba(0,0,0,0.15);
+            text-align:center;">
+
+    <h3 style="color:#0d6efd;">🏥 Shri Siddh Homeopathy Consultancy</h3>
+
+    <br>
+
+    <h3 style="color:#28a745;">Monday to Friday</h3>
+
+    <p style="font-size:20px; margin-top:10px;">
+        📍 <strong>Satara</strong>
+    </p>
+
+    <p style="font-size:20px;">
+        🕙 <strong>10:00 AM – 6:00 PM</strong>
+    </p>
+
+    <hr style="margin:25px 0;">
+
+    <h3 style="color:#ff9800;">Saturday</h3>
+
+    <p style="font-size:20px;">
+        📍 <strong>Pune </strong>
+        
+    </p>
+
+    <p style="font-size:20px;">
+        🕙 <strong>10:00 AM – 5:00 PM</strong>
+    </p>
+
+    <hr style="margin:25px 0;">
+
+    <p style="font-size:18px;">
+        📞 <strong>Contact:</strong> +91 7447429295 / +91 9766923235
+    </p>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>Shri Siddh Homeopathy Consultancy</h3>
+
+<p>Natural Care | Trusted Treatment | Better Health</p>
+
+<p>📍 Address: SATARA</p>
+
+<p>📞 Phone: +91 74474 29295/+91 9766923235</p>
+
+<p>© 2026 Shri Siddh Homeopathy Consultancy. All Rights Reserved.</p>
+
+</footer>
+
+<a href="https://wa.me/917447429295"
+   target="_blank"
+   title="Chat on WhatsApp"
+   style="
+      position:fixed;
+      bottom:25px;
+      right:25px;
+      z-index:9999;
+      display:block;
+   ">
+
+    <img src="Whatsapp_Loga.jpeg"
+         alt="WhatsApp"
+         style="
+            width:65px;
+            height:65px;
+            border-radius:50%;
+            box-shadow:0 5px 15px rgba(0,0,0,.3);
+            transition:0.3s;">
+            
+</a>
+</body>
+</html>
